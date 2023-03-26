@@ -1,0 +1,15 @@
+---
+import Layout from '../layouts/Layout.astro';
+import News from '../components/News.vue';
+import Discounts from '../components/Discounts.vue';
+
+import data from '../data/data.json';
+---
+
+<Layout>
+	<main>
+		<News client:load />
+		<Discounts discounts={data} client:load />
+	</main>
+</Layout>
+
