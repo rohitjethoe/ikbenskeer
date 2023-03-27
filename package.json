@@ -12,6 +12,7 @@
   "dependencies": {
     "@astrojs/vue": "^2.1.0",
     "astro": "^2.1.7",
+    "firebase": "^9.18.0",
     "sass": "^1.60.0",
     "vue": "^3.2.47"
   }

@@ -1,14 +1,14 @@
 <template>
-    <a class="discount" :href="details.url">
+    <a class="discount" :href="details.data.url" target="_blank">
         <div class="logo">
-            <img :src="details.logo" alt="IKEA" />
+            <img :src="details.data.logo" alt="IKEA" />
         </div>
         <div class="name">
-            <h3>{{ details.company }}</h3>
-            <p>{{ details.name }}</p>
+            <h3>{{ details.data.company }}</h3>
+            <p>{{ details.data.name }}</p>
         </div>
         <div class="price">
-            <p v-if="details.isFree">GRATIS</p>
+            <p v-if="details.data.isFree">GRATIS</p>
         </div>
     </a>
 </template>
@@ -17,7 +17,7 @@
 export default {
     name: "DiscountComponent",
     props: {
-        details: JSON, studentsOnly: Boolean
+        details: JSON
     }
 }
 </script>

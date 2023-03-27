@@ -1,7 +1,7 @@
 <template>
   <div class="discounts">
     <div class="discounts-filter">
-      <div class="filter-studentsOnly" @click="$event => this.studentsOnlyFilter()">
+      <div class="filter-studentsOnly" @click="$event => studentsOnly ? this.getData() : this.getPupilData()">
         <input type="checkbox" name="studentsOnly" id="studentsOnly"  v-model="studentsOnly"> 
         <label for="studentsOnly">Alleen Middelbare Scholier</label>
       </div>
@@ -10,8 +10,7 @@
       <Discount 
       v-for="discount in data" 
       :key="discount.id" 
-      :details="discount" 
-      :studentsOnly="studentsOnly"/>
+      :details="discount"/>
     </div>
   </div>
 </template>
@@ -28,21 +27,28 @@ export default {
       }
     },
     methods: {
-      studentsOnlyFilter: function() {
-        if (this.studentsOnly === false) {
-          for (let i = 0; i < Object.keys(this.data).length; i++) {
-            if (this.data[i].studentsOnly) {
-              delete this.data[i]
-            }
-          }
-        } else {
-          console.log('hi')
-          this.data = this.discounts;
-        }
-      }
+      getData: async function() {
+        const res = await fetch(`${window.location.origin}/api/data.json`);
+        const data = await res.json();
+        this.data = data;
+      },
+
+      getPupilData: async function() {
+        let finalData = [];
+        const res = await fetch(`${window.location.origin}/api/data.json`);
+        const data = await res.json();
+
+        data.forEach(discount => {
+          if (discount.data.studentsOnly === false) {
+            finalData.push(discount);
+          };
+        });
+
+        this.data = finalData;
+      },
     },
-    props: {
-      discounts: JSON
+    async mounted() {
+      this.getData();
     },
     components: {
       Discount
