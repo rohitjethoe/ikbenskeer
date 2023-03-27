@@ -58,7 +58,7 @@ export default {
 
 <style lang="scss" scoped>
   .discounts {
-    width: 400px;
+    width: 90%;
     margin: 0 auto;
     .discounts-filter {
       margin: 30px 0px;
