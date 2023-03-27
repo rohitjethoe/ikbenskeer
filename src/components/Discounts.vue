@@ -60,6 +60,20 @@ export default {
   .discounts {
     width: 400px;
     margin: 0 auto;
+    .discounts-filter {
+      margin: 30px 0px;
+      .filter-studentsOnly {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 15px;
+        input {
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
     .discounts-list {
       display: flex;
       flex-direction: column;

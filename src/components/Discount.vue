@@ -8,7 +8,17 @@
             <p>{{ details.data.name }}</p>
         </div>
         <div class="price">
-            <p v-if="details.data.isFree">GRATIS</p>
+            <div v-if="details.data.isFree">
+                <p class="originalPrice">€{{ details.data.originalPrice }}</p>
+                <p>GRATIS</p>
+            </div>
+            <div v-else-if="details.data.isPercentage">
+                <p>-{{ details.data.price }}%</p>
+            </div>
+            <div v-else>
+                <p class="originalPrice">€{{ details.data.originalPrice }}</p>
+                <p>€{{ details.data.price }}</p>
+            </div>
         </div>
     </a>
 </template>
@@ -63,6 +73,11 @@ export default {
             p {
                 color: #6a55c6;
                 font-weight: 500;
+                text-align: center;
+            }
+            .originalPrice {
+                text-decoration: line-through;
+                color: #444444;
             }
         }
     }

@@ -7,7 +7,7 @@
             :href="news[current].link" 
             target="_blank">
                 <h5>{{ news[current].source }}</h5>
-                <p>{{  news[current].title }}</p>
+                <p>"{{  news[current].title }}"</p>
             </a>
         </div>
     </div>
@@ -36,7 +36,7 @@ export default {
                     link: "https://nos.nl/video/2466495-jongeren-komen-niet-goed-rond-ik-moet-schrappen-eind-van-de-maand"
                 },
                 3: {
-                    title: "6 op 10 jongeren bezorgd over stijgende prijzen en geldproblemen ",
+                    title: "6 op 10 jongeren bezorgd over stijgende prijzen en geldproblemen",
                     source: "UNICEF",
                     link: "https://www.unicef.nl/nieuws/2022-11-14-6-op-10-jongeren-bezorgd-over-stijgende-prijzen-en-geldproblemen"
                 }

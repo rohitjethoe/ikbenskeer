@@ -1,5 +1,6 @@
 ---
-	import Header from '../components/Header.vue';
+import Header from '../components/Header.vue';
+import Footer from '../components/Footer.vue';
 ---
 
 <!DOCTYPE html>
@@ -17,6 +18,7 @@
 	<body>
 		<Header client:load />
 		<slot />
+		<Footer client:load />
 	</body>
 </html>
 <style is:global>
