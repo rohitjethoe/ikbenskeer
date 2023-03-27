@@ -56,6 +56,8 @@ export default {
 
 <style lang="scss" scoped>
     .news {
+        user-select: none;
+        -webkit-user-select: none;
         width: 300px;
         margin: 5px auto;
         position: relative;

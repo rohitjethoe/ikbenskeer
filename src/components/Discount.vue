@@ -45,6 +45,8 @@ export default {
         width: 86%;
         margin: 0 auto;
         border: 2px solid #282828;
+        user-select: none;
+        -webkit-user-select: none;
         .logo {
             width: 20%;
             padding: 10px;
