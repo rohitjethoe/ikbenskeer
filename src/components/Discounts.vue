@@ -12,6 +12,11 @@
       :key="discount.id" 
       :details="discount"/>
     </div>
+    <div class="discounts-request">
+      <a href="mailto:henkkrol458@gmail.com">
+        Stuur een korting in
+      </a>
+    </div>
   </div>
 </template>
 
@@ -80,6 +85,18 @@ export default {
       gap: 15px;
       width: 100%;
       margin: 0 auto;
+    }
+    .discounts-request {
+      text-align: center;
+      margin-top: 40px;
+      a:link, a:visited {
+        color: #fff;
+        background-color: #282828;
+        padding: 12px 20px;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: 500;
+      }
     }
   }
 

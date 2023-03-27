@@ -20,7 +20,7 @@ export default {
 footer {
     margin-top: 60px;
     text-align: center;
-    font-size: 16px;
+    font-size: 14px;
     color: #282828;
     padding-top: 20px;
     .github {
