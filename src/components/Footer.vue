@@ -5,7 +5,7 @@
       <a href="https://github.com/rohitjethoe/ikbenskeer">Github Repository</a>.
     </div>
     <div class="copyright">
-      Made with <span>❤</span> by <a href="https://rohitjethoe.com">Rohit</a>.
+      Made with <span>❤</span> by <a target="_blank" href="http://tiktok.com/@h3nkkr0l">@h3nkkr0l</a>
     </div>
   </footer>
 </template>

@@ -14,6 +14,15 @@ import Footer from '../components/Footer.vue';
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Sarabun:wght@400;500;600&display=swap" rel="stylesheet">
+	
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-E9BESN0LN2"></script>
+		<script type="text/partytown">
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'G-E9BESN0LN2');
+	</script>
 	</head>
 	<body>
 		<Header client:load />
@@ -21,16 +30,6 @@ import Footer from '../components/Footer.vue';
 		<Footer client:load />
 	</body>
 </html>
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-E9BESN0LN2"></script>
-<script type="text/partytown">
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-E9BESN0LN2');
-</script>
 
 <style is:global>
 	:root {
